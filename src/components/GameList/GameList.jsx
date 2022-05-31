@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import useFetch from "../../hooks/useFetch"
 import GameCard from "../GameCard/GameCard";
+import Filters from "../Filters/Filters";
 
 function GameList(props) {
     const [filter, setFilter] = useState({
@@ -12,14 +13,15 @@ function GameList(props) {
 
     const {games} = useFetch(filter)
 
-    return (
+    return (<>
+        <Filters setFilter={setFilter}/>
         <div style={{display: "flex", flexWrap: "wrap"}}>
 
             {games.map((game)=>(
                 <GameCard key={game.id} game={game}/>
             ))}
         </div>
-
+        </>
             )
 }
 
