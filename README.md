@@ -1,3 +1,7 @@
-```jsx
-<pre>{JSON.stringify(game, null, 2)}</pre>
-```
+# Free games
+A simple application for searching and filtering games
+
+## Technologies:
+React, React Router v.6, axios
+
+
