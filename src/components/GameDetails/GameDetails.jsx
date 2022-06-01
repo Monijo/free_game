@@ -16,7 +16,7 @@ function GameDetails(props) {
             screenshots
         }
     } = useFetchGame(id)
-    console.log(title, game_url, status, platform)
+
     return (
         <div style={{
             maxWidth: "600px",
@@ -59,7 +59,7 @@ function GameDetails(props) {
                     screenshots.map(({image, id}) => (
                             <img
                                 style={{maxWidth: "280px", width: "100%", padding: "0 10px 10px 0"}}
-                                src={image} alt={image.split("/")[5].split("."[0])} key={id}/>
+                                src={image} alt={image.split("/")[5].split(".")[0]} key={id}/>
                         )
                     ))}
             </div>
